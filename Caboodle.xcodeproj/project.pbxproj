@@ -14,6 +14,7 @@
 		35E4F47427C5EB8300C6B172 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35E4F47327C5EB8300C6B172 /* Assets.xcassets */; };
 		35E4F47727C5EB8300C6B172 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35E4F47527C5EB8300C6B172 /* LaunchScreen.storyboard */; };
 		35E4F47F27C6D82E00C6B172 /* AddPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E4F47E27C6D82E00C6B172 /* AddPhotoViewController.swift */; };
+		606B067927D066FE00E5D8F7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606B067827D066FE00E5D8F7 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		35E4F47627C5EB8300C6B172 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35E4F47827C5EB8300C6B172 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35E4F47E27C6D82E00C6B172 /* AddPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoViewController.swift; sourceTree = "<group>"; };
+		606B067827D066FE00E5D8F7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				35E4F46C27C5EB7F00C6B172 /* SceneDelegate.swift */,
 				35E4F46E27C5EB7F00C6B172 /* ViewController.swift */,
 				35E4F47027C5EB7F00C6B172 /* Main.storyboard */,
+				606B067827D066FE00E5D8F7 /* LoginViewController.swift */,
 				35E4F47327C5EB8300C6B172 /* Assets.xcassets */,
 				35E4F47527C5EB8300C6B172 /* LaunchScreen.storyboard */,
 				35E4F47827C5EB8300C6B172 /* Info.plist */,
@@ -144,6 +147,7 @@
 				35E4F46F27C5EB7F00C6B172 /* ViewController.swift in Sources */,
 				35E4F47F27C6D82E00C6B172 /* AddPhotoViewController.swift in Sources */,
 				35E4F46B27C5EB7F00C6B172 /* AppDelegate.swift in Sources */,
+				606B067927D066FE00E5D8F7 /* LoginViewController.swift in Sources */,
 				35E4F46D27C5EB7F00C6B172 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
