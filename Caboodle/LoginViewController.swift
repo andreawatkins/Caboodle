@@ -24,19 +24,19 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         let usernameImage = UIImage(named:"Username")
                         addLeftImageTo(txtField: Username, andImage: usernameImage!)
-        let passwordImage = UIImage(named:"Password")
-                        addLeftImageTo(txtField: Password, andImage: passwordImage!)
+        //let passwordImage = UIImage(named:"Password")
+         //               addLeftImageTo(txtField: Password, andImage: passwordImage!)
         
         let gradientLayer = CAGradientLayer()
                 // Set the size of the layer to be equal to size of the display.
                 gradientLayer.frame = view.bounds
                 // Set an array of Core Graphics colors (.cgColor) to create the gradient.
                 // This example uses a Color Literal and a UIColor from RGB values.
-                gradientLayer.colors = [#colorLiteral(red: 0.7525072098, green: 0.541234076, blue: 0.913451314, alpha: 1).cgColor, UIColor(red: 1.00, green: 0.56, blue: 0.00, alpha: 1.00)]
+        gradientLayer.colors = [UIColor(red: 0.74, green: 0.41, blue: 0.80, alpha: 0.65).cgColor,UIColor(red: 1.00, green: 0.68, blue: 0.00, alpha: 0.27).cgColor]
                 // Rasterize this static layer to improve app performance.
                 gradientLayer.shouldRasterize = true
                 // Apply the gradient to the backgroundGradientView.
-                backgroundGradient.layer.addSublayer(gradientLayer)        // Do any additional setup after loading the view.
+        backgroundGradient.layer.insertSublayer(gradientLayer, at: 0)        // Do any additional setup after loading the view.
     }
     
 
