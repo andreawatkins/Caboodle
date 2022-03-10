@@ -10,7 +10,6 @@ import UIKit
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var Username: UITextField!
-    @IBOutlet weak var Password: UITextField!
     @IBOutlet weak var backgroundGradient: UIView!
     
     func addLeftImageTo(txtField: UITextField, andImage img: UIImage) {
@@ -20,22 +19,38 @@ class LoginViewController: UIViewController {
               txtField.leftViewMode = .always
           }
     
+    @IBAction func login(_ sender: UIButton) {
+        if (Username.text == ""){
+                let title = "Missing Name"
+                let message = "Please enter your first name."
+                let alertController =
+                    UIAlertController(title: title,
+                                      message: message,
+                                      preferredStyle: .alert)
+                let cancelAction =
+                    UIAlertAction(title: "OK",
+                                  style: .cancel,
+                                  handler: nil)
+                alertController.addAction(cancelAction)
+                present(alertController,
+                        animated: true,
+                        completion: nil)
+            }
+        else{
+            self.performSegue(withIdentifier: "loginSegue", sender:sender)
+            }
+            
+        }
+        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let usernameImage = UIImage(named:"Username")
                         addLeftImageTo(txtField: Username, andImage: usernameImage!)
-        //let passwordImage = UIImage(named:"Password")
-         //               addLeftImageTo(txtField: Password, andImage: passwordImage!)
-        
         let gradientLayer = CAGradientLayer()
-                // Set the size of the layer to be equal to size of the display.
                 gradientLayer.frame = view.bounds
-                // Set an array of Core Graphics colors (.cgColor) to create the gradient.
-                // This example uses a Color Literal and a UIColor from RGB values.
         gradientLayer.colors = [UIColor(red: 0.74, green: 0.41, blue: 0.80, alpha: 0.65).cgColor,UIColor(red: 1.00, green: 0.68, blue: 0.00, alpha: 0.27).cgColor]
-                // Rasterize this static layer to improve app performance.
                 gradientLayer.shouldRasterize = true
-                // Apply the gradient to the backgroundGradientView.
         backgroundGradient.layer.insertSublayer(gradientLayer, at: 0)        // Do any additional setup after loading the view.
     }
     
