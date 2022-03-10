@@ -53,7 +53,6 @@ class AddPhotoViewController: UIViewController, UINavigationControllerDelegate, 
             name: ClothingName.text ?? "",
             type: (types[ClothingType.selectedRow(inComponent: 0)]),
             image: clothing)
-        
         myClothes.append(item)
         
     }
