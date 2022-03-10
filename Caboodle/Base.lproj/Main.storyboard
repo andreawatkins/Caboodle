@@ -69,7 +69,7 @@
             </objects>
             <point key="canvasLocation" x="-1184" y="68"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Out-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Caboodle" customModuleProvider="target" sceneMemberID="viewController">
@@ -99,7 +99,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="zZA-Wn-iAr"/>
+                    <navigationItem key="navigationItem" title="Sign Out" id="7Os-id-WFi"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -214,10 +214,47 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="My Clothes" id="DoG-ny-7cV"/>
+                    <connections>
+                        <segue destination="cDh-7Q-oLL" kind="presentation" identifier="showDetail" id="cNA-db-PNr"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gwz-y3-fsy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2307.2463768115945" y="67.633928571428569"/>
+        </scene>
+        <!--Clothing Details View Controller-->
+        <scene sceneID="mHh-qD-N7e">
+            <objects>
+                <viewController id="cDh-7Q-oLL" customClass="ClothingDetailsViewController" customModule="Caboodle" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UQm-gt-bMD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wTL-Ue-Jll">
+                                <rect key="frame" x="82" y="101" width="251" height="287"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G9W-SS-XGQ">
+                                <rect key="frame" x="340" y="45" width="42" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="xmark" catalog="system"/>
+                                <connections>
+                                    <segue destination="uwg-0j-ZSl" kind="unwind" unwindAction="unwindToMainWithSegue:" id="Ea0-HW-feI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ywf-HQ-if7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="clothingImage" destination="wTL-Ue-Jll" id="loE-vN-YGy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VOl-Fg-Jey" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="uwg-0j-ZSl" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3350.7246376811595" y="66.964285714285708"/>
         </scene>
         <!--My Clothes-->
         <scene sceneID="vGW-xr-fI5">
@@ -241,6 +278,7 @@
     </scenes>
     <resources>
         <image name="Logo" width="208.66667175292969" height="160"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

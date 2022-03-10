@@ -19,6 +19,7 @@
 		606B067927D066FE00E5D8F7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606B067827D066FE00E5D8F7 /* LoginViewController.swift */; };
 		60F655A227DA42D400BBA50C /* ClothingCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F655A127DA42D400BBA50C /* ClothingCollectionViewController.swift */; };
 		60F655A427DA430600BBA50C /* ClothingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F655A327DA430600BBA50C /* ClothingCollectionViewCell.swift */; };
+		60F655A627DABDE900BBA50C /* ClothingDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F655A527DABDE900BBA50C /* ClothingDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		606B067827D066FE00E5D8F7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		60F655A127DA42D400BBA50C /* ClothingCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothingCollectionViewController.swift; sourceTree = "<group>"; };
 		60F655A327DA430600BBA50C /* ClothingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothingCollectionViewCell.swift; sourceTree = "<group>"; };
+		60F655A527DABDE900BBA50C /* ClothingDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothingDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				35E4F46C27C5EB7F00C6B172 /* SceneDelegate.swift */,
 				35E4F46E27C5EB7F00C6B172 /* ViewController.swift */,
 				35E4F47027C5EB7F00C6B172 /* Main.storyboard */,
+				60F655A527DABDE900BBA50C /* ClothingDetailsViewController.swift */,
 				60F655A327DA430600BBA50C /* ClothingCollectionViewCell.swift */,
 				60F655A127DA42D400BBA50C /* ClothingCollectionViewController.swift */,
 				606B067827D066FE00E5D8F7 /* LoginViewController.swift */,
@@ -165,6 +168,7 @@
 				606B067927D066FE00E5D8F7 /* LoginViewController.swift in Sources */,
 				35E4F46D27C5EB7F00C6B172 /* SceneDelegate.swift in Sources */,
 				35F6A53527D9B9B000DD3D32 /* Closet.swift in Sources */,
+				60F655A627DABDE900BBA50C /* ClothingDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
