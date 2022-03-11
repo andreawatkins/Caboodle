@@ -7,6 +7,7 @@
 
 import UIKit
 var name = "";
+
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var Username: UITextField!
