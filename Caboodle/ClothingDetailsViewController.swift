@@ -10,12 +10,15 @@ import UIKit
 
 
 class ClothingDetailsViewController: UIViewController {
+    @IBOutlet weak var itemName: UILabel!
+    @IBOutlet weak var itemType: UILabel!
     var clothes: Clothes?
     @IBOutlet weak var clothingImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         clothingImage.image = clothes?.image
-
+        itemName.text = clothes?.name
+        itemType.text = clothes?.type
 
         // Do any additional setup after loading the view.
     }
