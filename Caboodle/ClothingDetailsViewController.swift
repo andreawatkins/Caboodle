@@ -7,10 +7,10 @@
 
 import UIKit
 
-var clothes: Clothes?
+
 
 class ClothingDetailsViewController: UIViewController {
-
+    var clothes: Clothes?
     @IBOutlet weak var clothingImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
