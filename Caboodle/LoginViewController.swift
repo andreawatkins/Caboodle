@@ -42,6 +42,13 @@ class LoginViewController: UIViewController {
             
         }
         
+    @IBAction func editEnded(_ sender: UITextField) {
+        sender.resignFirstResponder()
+    }
+    
+    @IBAction func backgroundTouched(_ sender: UIControl){
+           Username.resignFirstResponder();
+        }
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -46,6 +46,9 @@ class AddPhotoViewController: UIViewController, UINavigationControllerDelegate, 
        
         }
 
+    @IBAction func editEnded(_ sender: UITextField) {
+        sender.resignFirstResponder()
+    }
     @IBAction func SaveButton(_ sender: UIButton) {
         guard let img = imageView.image else { return }
         let clothing = img
