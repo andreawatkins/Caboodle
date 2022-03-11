@@ -17,7 +17,7 @@ let types = [
     "Shirt","Pants","Shoes"]
 
 
-class AddPhotoViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class AddPhotoViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
 
     @IBOutlet weak var vc: UIButton!
     @IBOutlet weak var imageView: UIImageView!
@@ -61,7 +61,7 @@ class AddPhotoViewController: UIViewController, UINavigationControllerDelegate, 
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-           return 3
+           return 1
        }
        
        func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {

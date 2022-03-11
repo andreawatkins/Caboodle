@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+var name = "";
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var Username: UITextField!
@@ -38,7 +38,8 @@ class LoginViewController: UIViewController {
             }
         else{
             self.performSegue(withIdentifier: "loginSegue", sender:sender)
-            }
+            name = Username.text ?? ""
+        }
             
         }
         
