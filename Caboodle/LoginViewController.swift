@@ -11,7 +11,6 @@ var name = "";
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var Username: UITextField!
-    @IBOutlet weak var backgroundGradient: UIView!
     
     func addLeftImageTo(txtField: UITextField, andImage img: UIImage) {
               let leftImageView = UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: img.size.width, height: img.size.height))
@@ -60,7 +59,7 @@ class LoginViewController: UIViewController {
                 gradientLayer.frame = view.bounds
         gradientLayer.colors = [UIColor(red: 0.74, green: 0.41, blue: 0.80, alpha: 0.65).cgColor,UIColor(red: 1.00, green: 0.68, blue: 0.00, alpha: 0.27).cgColor]
                 gradientLayer.shouldRasterize = true
-        backgroundGradient.layer.insertSublayer(gradientLayer, at: 0)        // Do any additional setup after loading the view.
+        view.layer.insertSublayer(gradientLayer, at: 0)        // Do any additional setup after loading the view.
     }
     
 

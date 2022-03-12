@@ -27,7 +27,11 @@ class AddPhotoViewController: UIViewController, UINavigationControllerDelegate, 
     @IBOutlet weak var ClothingName: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let gradientLayer = CAGradientLayer()
+                gradientLayer.frame = view.bounds
+        gradientLayer.colors = [UIColor(red: 0.74, green: 0.41, blue: 0.80, alpha: 0.65).cgColor,UIColor(red: 1.00, green: 0.68, blue: 0.00, alpha: 0.27).cgColor]
+                gradientLayer.shouldRasterize = true
+        view.layer.insertSublayer(gradientLayer, at: 0)        // Do any additional setup after loading the view.
         // Do any additional setup after loading the view.
     }
     
@@ -50,13 +54,47 @@ class AddPhotoViewController: UIViewController, UINavigationControllerDelegate, 
         sender.resignFirstResponder()
     }
     @IBAction func SaveButton(_ sender: UIButton) {
-        guard let img = imageView.image else { return }
-        let clothing = img
-        let item = Clothes(
-            name: ClothingName.text ?? "",
-            type: (types[ClothingType.selectedRow(inComponent: 0)]),
-            image: clothing)
-        myClothes.append(item)
+        guard let img = imageView.image else {
+            let title = "Missing Photo"
+            let message = "Please upload a photo to proceed."
+            let alertController =
+                UIAlertController(title: title,
+                                  message: message,
+                                  preferredStyle: .alert)
+            let cancelAction =
+                UIAlertAction(title: "OK",
+                              style: .cancel,
+                              handler: nil)
+            alertController.addAction(cancelAction)
+            present(alertController,
+                    animated: true,
+                    completion: nil)
+            return }
+        
+        if(ClothingName.text == ""){
+            let title = "Missing Nickname"
+            let message = "Please include a nickname to proceed."
+            let alertController =
+                UIAlertController(title: title,
+                                  message: message,
+                                  preferredStyle: .alert)
+            let cancelAction =
+                UIAlertAction(title: "OK",
+                              style: .cancel,
+                              handler: nil)
+            alertController.addAction(cancelAction)
+            present(alertController,
+                    animated: true,
+                    completion: nil)
+        }
+        else{
+            let clothing = img
+            let item = Clothes(
+                name: ClothingName.text ?? "",
+                type: (types[ClothingType.selectedRow(inComponent: 0)]),
+                image: clothing)
+            myClothes.append(item)
+        }
         
     }
     
