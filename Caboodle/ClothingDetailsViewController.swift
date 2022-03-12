@@ -13,12 +13,20 @@ class ClothingDetailsViewController: UIViewController {
     @IBOutlet weak var itemName: UILabel!
     @IBOutlet weak var itemType: UILabel!
     var clothes: Clothes?
+    @IBOutlet weak var backgroundGradient: UIView!
     @IBOutlet weak var clothingImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         clothingImage.image = clothes?.image
-        itemName.text = clothes?.name
-        itemType.text = clothes?.type
+        let name = clothes?.name ?? ""
+        let type = clothes?.type ?? ""
+        itemName.text = "Name: \(name)"
+        itemType.text = "Type: \(type)"
+        let gradientLayer = CAGradientLayer()
+                gradientLayer.frame = view.bounds
+        gradientLayer.colors = [UIColor(red: 0.74, green: 0.41, blue: 0.80, alpha: 0.65).cgColor,UIColor(red: 1.00, green: 0.68, blue: 0.00, alpha: 0.27).cgColor]
+                gradientLayer.shouldRasterize = true
+        backgroundGradient.layer.insertSublayer(gradientLayer, at: 0)    
 
         // Do any additional setup after loading the view.
     }

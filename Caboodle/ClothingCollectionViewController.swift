@@ -16,6 +16,15 @@ class ClothingCollectionViewController: UICollectionViewController {
         }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        /*
+        if let destinationController = segue.destination as? ClothingDetailsViewController {
+            if let indexPaths = collectionView.indexPathsForSelectedItems{
+                destinationController.clothes = myClothes[indexPaths[0].row]
+                collectionView.deselectItem(at: indexPaths[0], animated: false)
+                }
+            
+        }
+        */
             if segue.identifier == "showDetail" {
                 if let indexPaths = collectionView.indexPathsForSelectedItems{
                     let destinationController = segue.destination as! ClothingDetailsViewController
@@ -23,7 +32,9 @@ class ClothingCollectionViewController: UICollectionViewController {
                     collectionView.deselectItem(at: indexPaths[0], animated: false)
                 }
             }
+         
         }
+         
     
     override func viewDidLoad() {
         super.viewDidLoad()
