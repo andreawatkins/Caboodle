@@ -68,6 +68,8 @@ class AddPhotoViewController: UIViewController, UINavigationControllerDelegate, 
     @IBAction func editEnded(_ sender: UITextField) {
         sender.resignFirstResponder()
     }
+    
+    
     @IBAction func SaveButton(_ sender: UIButton) {
         guard let img = imageView.image else {
             let title = "Missing Photo"
@@ -102,6 +104,7 @@ class AddPhotoViewController: UIViewController, UINavigationControllerDelegate, 
                     animated: true,
                     completion: nil)
         }
+        
         else{
             let clothing = img
             let item = Clothes(
@@ -116,6 +119,9 @@ class AddPhotoViewController: UIViewController, UINavigationControllerDelegate, 
             if(item.type == "Bottoms") { bottoms.append(index)}
             if(item.type == "Top") { tops.append(index)}
             if(item.type == "Shoes") { shoes.append(index)}
+            
+            ClothingName.text = "";
+            imageView.image = nil;
         }
         
     }
