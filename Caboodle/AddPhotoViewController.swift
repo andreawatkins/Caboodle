@@ -10,11 +10,14 @@ import UIKit
 
     var Favorites: [Clothes] = []
     var myClothes: [Clothes] = []
+    var tops     : [Int] = []
+    var bottoms  : [Int] = []
+    var shoes    : [Int] = []
 
 
 
 let types = [
-    "Shirt","Pants","Shoes"]
+    "Top","Bottoms","Shoes"]
 
 
 class AddPhotoViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
@@ -43,12 +46,24 @@ class AddPhotoViewController: UIViewController, UINavigationControllerDelegate, 
         present(vc, animated: true)
     }
     
+    @IBAction func openPhotoLibraryButton(sender: UIButton) {
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = .photoLibrary;
+            imagePicker.allowsEditing = true
+            self.present(imagePicker, animated: true, completion: nil)
+        }
+    }
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true)
         imageView.image = info[.originalImage] as? UIImage;
         
        
         }
+    
+    
 
     @IBAction func editEnded(_ sender: UITextField) {
         sender.resignFirstResponder()
@@ -93,7 +108,14 @@ class AddPhotoViewController: UIViewController, UINavigationControllerDelegate, 
                 name: ClothingName.text ?? "",
                 type: (types[ClothingType.selectedRow(inComponent: 0)]),
                 image: clothing)
+            
             myClothes.append(item)
+            
+            let index =  myClothes.firstIndex(where: {$0.name == item.name}) ?? 0;
+            
+            if(item.type == "Bottoms") { bottoms.append(index)}
+            if(item.type == "Top") { tops.append(index)}
+            if(item.type == "Shoes") { shoes.append(index)}
         }
         
     }

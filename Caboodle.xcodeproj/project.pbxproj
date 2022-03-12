@@ -325,7 +325,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BH9RJB39T7;
+				DEVELOPMENT_TEAM = 6V4NTX5NDV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Caboodle/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Caboodle needs access to the camera in order for you to take pictures of outfit pieces to add to your closet. ";
@@ -339,7 +339,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = edu.depaul.Caboodle;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.depaul.csc471.aw.Caboodle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -354,7 +354,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BH9RJB39T7;
+				DEVELOPMENT_TEAM = 6V4NTX5NDV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Caboodle/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Caboodle needs access to the camera in order for you to take pictures of outfit pieces to add to your closet. ";
@@ -368,7 +368,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = edu.depaul.Caboodle;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.depaul.csc471.aw.Caboodle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
