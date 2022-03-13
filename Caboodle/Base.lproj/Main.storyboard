@@ -18,44 +18,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="9PR-LM-LqQ">
-                                <rect key="frame" x="48" y="90" width="317" height="208"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your first name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="icd-Ze-5Ip">
-                                <rect key="frame" x="90" y="399" width="235" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="textColor" red="0.71479522350000002" green="0.46427623769999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="editEnded:" destination="pih-q6-80x" eventType="editingDidEndOnExit" id="an2-wD-IKS"/>
-                                </connections>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FSs-ba-REv">
-                                <rect key="frame" x="145" y="484" width="123" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.87985986471176147" green="0.56216531991958618" blue="0.91362506151199341" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
-                                <color key="tintColor" systemColor="tertiarySystemBackgroundColor"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Login">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="15"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="login:" destination="pih-q6-80x" eventType="touchUpInside" id="Ti8-BY-rlX"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="68" translatesAutoresizingMaskIntoConstraints="NO" id="PgV-Fc-fFH">
+                                <rect key="frame" x="59" y="80" width="317" height="409"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="9PR-LM-LqQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="317" height="208"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="208" id="3XT-n8-upS"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="317" id="Tp0-zD-INw"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your first name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="icd-Ze-5Ip">
+                                        <rect key="frame" x="41" y="276" width="235" height="34"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="235" id="2As-d7-bzO"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.71479522350000002" green="0.46427623769999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="editEnded:" destination="pih-q6-80x" eventType="editingDidEndOnExit" id="an2-wD-IKS"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FSs-ba-REv">
+                                        <rect key="frame" x="97" y="378" width="123" height="31"/>
+                                        <color key="backgroundColor" red="0.87985986471176147" green="0.56216531991958618" blue="0.91362506151199341" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="123" id="P7X-d8-rHi"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                        <color key="tintColor" systemColor="tertiarySystemBackgroundColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Login">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="login:" destination="pih-q6-80x" eventType="touchUpInside" id="Ti8-BY-rlX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="9PR-LM-LqQ" secondAttribute="trailing" id="AmB-AP-5QQ"/>
+                                    <constraint firstItem="9PR-LM-LqQ" firstAttribute="leading" secondItem="PgV-Fc-fFH" secondAttribute="leading" id="RfE-WO-Yf0"/>
+                                    <constraint firstItem="9PR-LM-LqQ" firstAttribute="top" secondItem="PgV-Fc-fFH" secondAttribute="top" id="wik-MY-N9l"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PeN-ej-oAG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PgV-Fc-fFH" firstAttribute="leading" secondItem="PeN-ej-oAG" secondAttribute="leading" constant="59" id="Pft-fg-G0V"/>
+                            <constraint firstItem="PgV-Fc-fFH" firstAttribute="top" secondItem="PeN-ej-oAG" secondAttribute="top" constant="36" id="uS8-AV-jiw"/>
+                        </constraints>
                         <connections>
                             <action selector="backgroundTouched:" destination="pih-q6-80x" eventType="touchDown" id="UnN-dU-BIq"/>
                         </connections>
@@ -67,7 +88,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fdJ-Hb-Ggg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-288" y="66"/>
+            <point key="canvasLocation" x="-288.40579710144931" y="65.625"/>
         </scene>
         <!--Outfit Generator-->
         <scene sceneID="yvm-Km-chd">
@@ -231,7 +252,6 @@
                         <outlet property="ClothingType" destination="4PD-hw-8ln" id="TM5-RM-dbk"/>
                         <outlet property="imageView" destination="Hd8-WA-bDW" id="KPb-wm-EQF"/>
                         <outlet property="vc" destination="hd5-LP-Uve" id="Mb9-wq-EQ9"/>
-                        <segue destination="e4s-g5-OJ4" kind="presentation" identifier="showGallery" modalPresentationStyle="fullScreen" id="hCA-mF-pMF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jfF-Xq-6aO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -294,28 +314,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kot-Ph-qjX">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kot-Ph-qjX">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Item Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PPH-1j-uu7">
-                                        <rect key="frame" x="61" y="604" width="92" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Item Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p3M-Jy-VPm">
-                                        <rect key="frame" x="61" y="509" width="168" height="87"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wTL-Ue-Jll">
-                                        <rect key="frame" x="66" y="151" width="292" height="350"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="58" translatesAutoresizingMaskIntoConstraints="NO" id="cQf-lg-qOh">
+                                        <rect key="frame" x="61" y="151" width="297" height="503"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wTL-Ue-Jll">
+                                                <rect key="frame" x="0.0" y="0.0" width="297" height="350"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p3M-Jy-VPm">
+                                                <rect key="frame" x="0.0" y="408" width="297" height="18.5"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PPH-1j-uu7">
+                                                <rect key="frame" x="0.0" y="484.5" width="297" height="18.5"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="MVh-PB-ljd">
                                         <rect key="frame" x="311" y="61" width="68" height="42"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -335,10 +356,22 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="cQf-lg-qOh" firstAttribute="leading" secondItem="kot-Ph-qjX" secondAttribute="leading" constant="61" id="fp4-ON-3Pk"/>
+                                    <constraint firstItem="cQf-lg-qOh" firstAttribute="top" secondItem="MVh-PB-ljd" secondAttribute="bottom" constant="48" id="mfA-QK-wGB"/>
+                                    <constraint firstAttribute="bottom" secondItem="cQf-lg-qOh" secondAttribute="bottom" constant="242" id="u5s-ti-2K1"/>
+                                    <constraint firstAttribute="trailing" secondItem="cQf-lg-qOh" secondAttribute="trailing" constant="56" id="zCr-Pr-sWR"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ywf-HQ-if7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kot-Ph-qjX" firstAttribute="centerX" secondItem="UQm-gt-bMD" secondAttribute="centerX" id="2Bx-T2-bA9"/>
+                            <constraint firstItem="kot-Ph-qjX" firstAttribute="centerY" secondItem="UQm-gt-bMD" secondAttribute="centerY" id="6bU-AZ-fO9"/>
+                            <constraint firstItem="kot-Ph-qjX" firstAttribute="top" secondItem="UQm-gt-bMD" secondAttribute="topMargin" constant="-44" id="DfQ-JV-oGK"/>
+                            <constraint firstItem="kot-Ph-qjX" firstAttribute="leading" secondItem="Ywf-HQ-if7" secondAttribute="leading" id="vF2-ih-58M"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -397,9 +430,6 @@
             <point key="canvasLocation" x="713.04347826086962" y="65.625"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="Oib-Mj-NBm"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="Logo" width="208.66667175292969" height="160"/>
         <image name="camera.on.rectangle" catalog="system" width="128" height="96"/>
