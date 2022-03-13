@@ -121,8 +121,8 @@ class AddPhotoViewController: UIViewController, UINavigationControllerDelegate, 
             
             ClothingName.text = "";
             imageView.image = nil;
-            let title = "Photo saved!"
-            let message = "To review your photos, visit your closet!"
+            let title = "Photo Saved!"
+            let message = "To review your photos, visit your closet."
             let alertController =
                 UIAlertController(title: title,
                                   message: message,
