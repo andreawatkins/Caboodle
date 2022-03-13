@@ -17,7 +17,6 @@
 		35F6A53327D9A35500DD3D32 /* Clothes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F6A53227D9A35500DD3D32 /* Clothes.swift */; };
 		35F6A53527D9B9B000DD3D32 /* Closet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F6A53427D9B9AF00DD3D32 /* Closet.swift */; };
 		6047DD9F27DC14700057A27B /* OutfitGeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6047DD9E27DC14700057A27B /* OutfitGeneratorViewController.swift */; };
-		604D04EE27DBAB4D00E25CD2 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604D04ED27DBAB4D00E25CD2 /* MainScreenViewController.swift */; };
 		606B067927D066FE00E5D8F7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606B067827D066FE00E5D8F7 /* LoginViewController.swift */; };
 		60F655A227DA42D400BBA50C /* ClothingCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F655A127DA42D400BBA50C /* ClothingCollectionViewController.swift */; };
 		60F655A427DA430600BBA50C /* ClothingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F655A327DA430600BBA50C /* ClothingCollectionViewCell.swift */; };
@@ -37,7 +36,6 @@
 		35F6A53227D9A35500DD3D32 /* Clothes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clothes.swift; sourceTree = "<group>"; };
 		35F6A53427D9B9AF00DD3D32 /* Closet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closet.swift; sourceTree = "<group>"; };
 		6047DD9E27DC14700057A27B /* OutfitGeneratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutfitGeneratorViewController.swift; sourceTree = "<group>"; };
-		604D04ED27DBAB4D00E25CD2 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		606B067827D066FE00E5D8F7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		60F655A127DA42D400BBA50C /* ClothingCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothingCollectionViewController.swift; sourceTree = "<group>"; };
 		60F655A327DA430600BBA50C /* ClothingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothingCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -82,7 +80,6 @@
 				35E4F46E27C5EB7F00C6B172 /* ViewController.swift */,
 				35E4F47027C5EB7F00C6B172 /* Main.storyboard */,
 				6047DD9E27DC14700057A27B /* OutfitGeneratorViewController.swift */,
-				604D04ED27DBAB4D00E25CD2 /* MainScreenViewController.swift */,
 				60F655A527DABDE900BBA50C /* ClothingDetailsViewController.swift */,
 				60F655A327DA430600BBA50C /* ClothingCollectionViewCell.swift */,
 				60F655A127DA42D400BBA50C /* ClothingCollectionViewController.swift */,
@@ -173,7 +170,6 @@
 				60F655A427DA430600BBA50C /* ClothingCollectionViewCell.swift in Sources */,
 				606B067927D066FE00E5D8F7 /* LoginViewController.swift in Sources */,
 				35E4F46D27C5EB7F00C6B172 /* SceneDelegate.swift in Sources */,
-				604D04EE27DBAB4D00E25CD2 /* MainScreenViewController.swift in Sources */,
 				35F6A53527D9B9B000DD3D32 /* Closet.swift in Sources */,
 				60F655A627DABDE900BBA50C /* ClothingDetailsViewController.swift in Sources */,
 				6047DD9F27DC14700057A27B /* OutfitGeneratorViewController.swift in Sources */,
@@ -325,10 +321,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6V4NTX5NDV;
+				DEVELOPMENT_TEAM = BH9RJB39T7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Caboodle/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Caboodle needs access to the camera in order for you to take pictures of outfit pieces to add to your closet. ";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Caboodle would like to access your camera roll so you can choose photos of clothes to add to your closet. ";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -339,7 +336,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = edu.depaul.csc471.aw.Caboodle;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.depaul.Caboodle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -354,10 +351,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6V4NTX5NDV;
+				DEVELOPMENT_TEAM = BH9RJB39T7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Caboodle/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Caboodle needs access to the camera in order for you to take pictures of outfit pieces to add to your closet. ";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Caboodle would like to access your camera roll so you can choose photos of clothes to add to your closet. ";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -368,7 +366,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = edu.depaul.csc471.aw.Caboodle;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.depaul.Caboodle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

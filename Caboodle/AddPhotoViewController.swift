@@ -86,8 +86,8 @@ class AddPhotoViewController: UIViewController, UINavigationControllerDelegate, 
             present(alertController,
                     animated: true,
                     completion: nil)
-            return }
-        
+            return
+        }
         if(ClothingName.text == ""){
             let title = "Missing Nickname"
             let message = "Please include a nickname to proceed."
@@ -104,7 +104,6 @@ class AddPhotoViewController: UIViewController, UINavigationControllerDelegate, 
                     animated: true,
                     completion: nil)
         }
-        
         else{
             let clothing = img
             let item = Clothes(
@@ -122,6 +121,7 @@ class AddPhotoViewController: UIViewController, UINavigationControllerDelegate, 
             
             ClothingName.text = "";
             imageView.image = nil;
+            self.performSegue(withIdentifier: "showGallery", sender:sender)
         }
         
     }
