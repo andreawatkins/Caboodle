@@ -121,7 +121,20 @@ class AddPhotoViewController: UIViewController, UINavigationControllerDelegate, 
             
             ClothingName.text = "";
             imageView.image = nil;
-            self.performSegue(withIdentifier: "showGallery", sender:sender)
+            let title = "Photo saved!"
+            let message = "To review your photos, visit your closet!"
+            let alertController =
+                UIAlertController(title: title,
+                                  message: message,
+                                  preferredStyle: .alert)
+            let cancelAction =
+                UIAlertAction(title: "OK",
+                              style: .cancel,
+                              handler: nil)
+            alertController.addAction(cancelAction)
+            present(alertController,
+                    animated: true,
+                    completion: nil)
         }
         
     }
