@@ -314,69 +314,71 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kot-Ph-qjX">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="GqH-w8-7i5">
+                                <rect key="frame" x="59" y="155" width="296" height="488"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="58" translatesAutoresizingMaskIntoConstraints="NO" id="cQf-lg-qOh">
-                                        <rect key="frame" x="61" y="151" width="297" height="503"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wTL-Ue-Jll">
-                                                <rect key="frame" x="0.0" y="0.0" width="297" height="350"/>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p3M-Jy-VPm">
-                                                <rect key="frame" x="0.0" y="408" width="297" height="18.5"/>
-                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PPH-1j-uu7">
-                                                <rect key="frame" x="0.0" y="484.5" width="297" height="18.5"/>
-                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="MVh-PB-ljd">
-                                        <rect key="frame" x="311" y="61" width="68" height="42"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="">
-                                            <imageReference key="image" image="xmark" catalog="system" symbolScale="large" renderingMode="hierarchical-single">
-                                                <hierarchicalColors>
-                                                    <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color systemColor="secondaryLabelColor"/>
-                                                    <color systemColor="tertiaryLabelColor"/>
-                                                </hierarchicalColors>
-                                            </imageReference>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <segue destination="S5E-Bd-iNH" kind="unwind" unwindAction="unwindToMainWithSegue:" id="AaN-l9-e1b"/>
-                                        </connections>
-                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wTL-Ue-Jll">
+                                        <rect key="frame" x="0.0" y="0.0" width="296" height="350"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PPH-1j-uu7">
+                                        <rect key="frame" x="0.0" y="374" width="235" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="235" id="heg-VR-rHY"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="yYD-Fe-YFk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p3M-Jy-VPm">
+                                        <rect key="frame" x="0.0" y="446" width="235" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="235" id="07p-1K-4k0"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="42" id="aH8-6b-amp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="cQf-lg-qOh" firstAttribute="leading" secondItem="kot-Ph-qjX" secondAttribute="leading" constant="61" id="fp4-ON-3Pk"/>
-                                    <constraint firstItem="cQf-lg-qOh" firstAttribute="top" secondItem="MVh-PB-ljd" secondAttribute="bottom" constant="48" id="mfA-QK-wGB"/>
-                                    <constraint firstAttribute="bottom" secondItem="cQf-lg-qOh" secondAttribute="bottom" constant="242" id="u5s-ti-2K1"/>
-                                    <constraint firstAttribute="trailing" secondItem="cQf-lg-qOh" secondAttribute="trailing" constant="56" id="zCr-Pr-sWR"/>
+                                    <constraint firstItem="wTL-Ue-Jll" firstAttribute="trailing" secondItem="GqH-w8-7i5" secondAttribute="trailingMargin" id="8eB-ZI-bmL"/>
+                                    <constraint firstAttribute="trailing" secondItem="wTL-Ue-Jll" secondAttribute="trailing" id="WH3-0Y-GiO"/>
+                                    <constraint firstItem="wTL-Ue-Jll" firstAttribute="top" secondItem="GqH-w8-7i5" secondAttribute="top" id="b7T-SH-X6Q"/>
+                                    <constraint firstItem="wTL-Ue-Jll" firstAttribute="leading" secondItem="GqH-w8-7i5" secondAttribute="leading" id="o7e-om-Ctp"/>
+                                    <constraint firstItem="PPH-1j-uu7" firstAttribute="top" secondItem="wTL-Ue-Jll" secondAttribute="bottom" constant="24" id="zrq-xP-jLI"/>
                                 </constraints>
-                            </view>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="MVh-PB-ljd">
+                                <rect key="frame" x="313" y="86" width="57" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="">
+                                    <imageReference key="image" image="xmark" catalog="system" symbolScale="large" renderingMode="hierarchical-single">
+                                        <hierarchicalColors>
+                                            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color systemColor="secondaryLabelColor"/>
+                                            <color systemColor="tertiaryLabelColor"/>
+                                        </hierarchicalColors>
+                                    </imageReference>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="S5E-Bd-iNH" kind="unwind" unwindAction="unwindToMainWithSegue:" id="AaN-l9-e1b"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ywf-HQ-if7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="kot-Ph-qjX" firstAttribute="centerX" secondItem="UQm-gt-bMD" secondAttribute="centerX" id="2Bx-T2-bA9"/>
-                            <constraint firstItem="kot-Ph-qjX" firstAttribute="centerY" secondItem="UQm-gt-bMD" secondAttribute="centerY" id="6bU-AZ-fO9"/>
-                            <constraint firstItem="kot-Ph-qjX" firstAttribute="top" secondItem="UQm-gt-bMD" secondAttribute="topMargin" constant="-44" id="DfQ-JV-oGK"/>
-                            <constraint firstItem="kot-Ph-qjX" firstAttribute="leading" secondItem="Ywf-HQ-if7" secondAttribute="leading" id="vF2-ih-58M"/>
+                            <constraint firstItem="Ywf-HQ-if7" firstAttribute="trailing" secondItem="GqH-w8-7i5" secondAttribute="trailing" constant="59" id="Niv-el-onM"/>
+                            <constraint firstItem="GqH-w8-7i5" firstAttribute="leading" secondItem="Ywf-HQ-if7" secondAttribute="leading" constant="59" id="gTr-e6-RbZ"/>
+                            <constraint firstItem="Ywf-HQ-if7" firstAttribute="bottom" secondItem="GqH-w8-7i5" secondAttribute="bottom" constant="170" id="oAy-JI-dB5"/>
+                            <constraint firstItem="GqH-w8-7i5" firstAttribute="top" secondItem="MVh-PB-ljd" secondAttribute="bottom" constant="27" id="oMp-Zg-b7K"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="backgroundGradient" destination="kot-Ph-qjX" id="FXe-Sn-kRx"/>
                         <outlet property="clothingImage" destination="wTL-Ue-Jll" id="loE-vN-YGy"/>
                         <outlet property="itemName" destination="p3M-Jy-VPm" id="884-7j-Xw0"/>
                         <outlet property="itemType" destination="PPH-1j-uu7" id="Feg-8I-THx"/>
