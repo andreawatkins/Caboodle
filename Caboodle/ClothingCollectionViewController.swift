@@ -35,7 +35,9 @@ class ClothingCollectionViewController: UICollectionViewController {
          
         }
          
-    
+    override func viewDidAppear(_ animated:Bool){
+        self.collectionView.reloadData()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "\(name)'s Closet"
